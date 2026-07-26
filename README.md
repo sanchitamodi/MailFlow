@@ -57,3 +57,12 @@ An event-driven serverless system deployed on **AWS Lambda** that automates proc
   * Calls **Amazon Bedrock** (using Amazon Nova Pro by default) to classify the email based on custom AP business rules (such as matching PO prefixes, key terms like "travel reimbursement", "lease/copier", or "cash receipts").
   * Maps the classification output to designated desk email distribution addresses (e.g., Desk 1 through Desk 5, or dual routing).
   * Automatically forwards the original Outlook message to the target desk recipients via Microsoft Graph API.
+
+## Tech Stack
+  * AWS Lambda
+  * Microsoft Graph API
+  * AWS S3
+  * Amazon EventBridge
+  * Amazon Bedrock
+  * IAM
+  * Python
