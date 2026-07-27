@@ -41,7 +41,7 @@ An event-driven serverless system deployed on **AWS Lambda** that automates proc
 
 ## Core Components
 
-### 1. Ingestion Worker (`lambda_1_ingestion.py`)
+### 1. Ingestion Worker (`lambda_function_1.py`)
 * **Trigger:** Scheduled EventBridge Rule (Cron/Rate) or manual execution.
 * **Responsibilities:**
   * Connects to Microsoft Entra ID (OAuth 2.0 `client_credentials`) to retrieve an access token.
@@ -50,7 +50,7 @@ An event-driven serverless system deployed on **AWS Lambda** that automates proc
   * Generates an email summary payload (`metadata.json`) containing sender info, subject line, body preview, and attachment paths, saved to `incoming/<message_id>/metadata.json`.
   * Marks the email as **read** in Outlook *only after* successful S3 upload.
 
-### 2. Router & Classifier (`lambda_2_routing.py`)
+### 2. Router & Classifier (`router_lambda_function.py`)
 * **Trigger:** S3 Event Notification (`s3:ObjectCreated:*` matching suffix `/metadata.json`).
 * **Responsibilities:**
   * Reads the `metadata.json` payload directly from S3.
