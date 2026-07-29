@@ -1,9 +1,8 @@
-# MailFlow_EmailRouter
+# MailFlow
+An event-driven serverless system deployed on AWS Lambda that automates processing, AI classification, and auto-forwarding for incoming Accounts Payable (AP) emails via the Microsoft Graph API and Amazon Bedrock.
+
+
 # Accounts Payable Automated Email Ingestion & AI Routing Pipeline
-
-An event-driven serverless system deployed on **AWS Lambda** that automates processing, AI classification, and auto-forwarding for incoming Accounts Payable (AP) emails via the **Microsoft Graph API** and **Amazon Bedrock**.
-
----
 
 ## Architecture Overview
                       ┌──────────────────────────┐
